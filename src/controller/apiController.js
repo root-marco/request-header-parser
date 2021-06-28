@@ -9,9 +9,9 @@ export async function hello(req, res) {
 export async function whoami(req, res) {
 
     res.json({
-        ip: req.ip,
+        ipaddress: req.ip,
+        language: req.headers['accept-language'],
+        software: req.headers["user-agent"],
     });
-
-    console.log(req.ips);
 
 }
